@@ -8,12 +8,17 @@ body {
   font-size: 100%;
 }
 
-.row{
+.row {
   --bs-gutter-x: 0rem;
 }
 
 .container-fluid {
   --bs-gutter-x: 0rem;
+}
+
+#ricky-and-morty {
+  animation: flip 2s linear infinite;
+  transform-style: preserve-3d;
 }
 
 h1 {
@@ -90,9 +95,10 @@ h1 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation: fadeIn 1s forwards;
 }
 
-.card{
+.card {
   --bs-card-bg: transparent;
 }
 
@@ -104,6 +110,12 @@ h1 {
 .size-card {
   width: 17rem;
   height: 20rem;
+  transition: transform 0.3s ease;
+}
+
+.size-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #size-img {
@@ -173,7 +185,7 @@ li {
   margin-bottom: 500px;
 }
 
-#pagination{
+#pagination {
   margin-left: 80px;
 }
 
@@ -188,4 +200,27 @@ footer {
 #credits {
   font-weight: 700;
   color: #4d9f4b;
+}
+/* Animations -------------------------------------- */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
