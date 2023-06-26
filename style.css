@@ -115,7 +115,7 @@ h1 {
 
 .size-card:hover {
   transform: scale(1.1);
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 #size-img {
